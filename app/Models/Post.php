@@ -15,4 +15,14 @@ class Post extends Model
         'content',
         'posted_at',
     ];
+
+    public function user(): BelongsTo
+    {
+        $this->belongsTo(User::class);
+    }
+
+    public function tags(): HasMany
+    {
+        $this->hasMany(Tag::class);
+    }
 }

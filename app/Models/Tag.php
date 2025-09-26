@@ -9,4 +9,13 @@ class Tag extends Model
 {
     /** @use HasFactory<\Database\Factories\TagFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'content',
+    ];
+
+    public function post(): BelongsTo
+    {
+        $this->belongsTo(Post::class);
+    }
 }
