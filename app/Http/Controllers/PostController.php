@@ -14,5 +14,12 @@ class PostController extends Controller
             'content' => $request->content,
         ]);
     }
+
+    public function show(string $id): View
+    {
+        return view('post.show', [
+            'post' => Post::findOrFail($id);
+        ])
+    }
 }
 
