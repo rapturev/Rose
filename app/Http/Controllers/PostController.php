@@ -7,7 +7,7 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
-    public function create(PostRequest $request)
+    public function store(PostRequest $request)
     {
         Post::create([
             'title' => $request->title,
