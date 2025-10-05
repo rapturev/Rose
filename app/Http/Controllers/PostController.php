@@ -7,6 +7,11 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
+    public function create(): View
+    {
+
+    }
+
     public function store(PostRequest $request)
     {
         Post::create([
@@ -20,6 +25,21 @@ class PostController extends Controller
         return view('post.show', [
             'post' => Post::findOrFail($id);
         ])
+    }
+
+    public function edit(): View
+    {
+
+    }
+
+    public function update(): View
+    {
+
+    }
+
+    public function destroy(): View
+    {
+
     }
 }
 
