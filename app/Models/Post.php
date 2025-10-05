@@ -15,7 +15,6 @@ class Post extends Model
     protected $fillable = [
         'title',
         'content',
-        'posted_at',
     ];
 
     public function user(): BelongsTo
