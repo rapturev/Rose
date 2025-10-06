@@ -14,10 +14,7 @@ class PostController extends Controller
 
     public function store(PostRequest $request)
     {
-        Post::create([
-            'title' => $request->title,
-            'content' => $request->content,
-        ]);
+        Post::create([$request->validated]);
     }
 
     public function show(string $id): View
