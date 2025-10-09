@@ -12,11 +12,12 @@ class Tag extends Model
     use HasFactory;
 
     protected $fillable = [
-        'content',
+        'name',
+        'slug',
     ];
 
-    public function post(): BelongsTo
+    public function posts(): BelongsToMany
     {
-        $this->belongsTo(Post::class);
+        $this->belongsToMany(Post::class);
     }
 }
