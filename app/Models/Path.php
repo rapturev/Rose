@@ -9,4 +9,8 @@ class Path extends Model
 {
     /** @use HasFactory<\Database\Factories\PathFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+    ]
 }
